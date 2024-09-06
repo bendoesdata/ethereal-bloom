@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereal Bloom - Ambient Music Series</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        .section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        #banner {
+            background: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+        .lewitt-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+        }
+        .lewitt-line {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        .lewitt-shape {
+            background-color: rgba(255, 100, 100, 0.6);
+        }
+        #about {
+            background: #fff;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        #dates {
+            background: #f0f0f0;
+        }
+        #contact {
+            background: #333;
+            color: #fff;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            text-align: center;
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+        }
+        h1, h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 10;
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        #banner p {
+            position: relative;
+            z-index: 10;
+            font-size: 1.2rem;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#banner">Home</a>
+        <a href="#about">About</a>
+        <a href="#dates">Dates</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div id="banner" class="section">
+        <div class="lewitt-grid">
+            <!-- Grid lines -->
+            <div class="lewitt-line" style="grid-column: 1 / -1; grid-row: 3 / 4;"></div>
+            <div class="lewitt-line" style="grid-column: 1 / -1; grid-row: 7 / 8;"></div>
+            <div class="lewitt-line" style="grid-column: 3 / 4; grid-row: 1 / -1;"></div>
+            <div class="lewitt-line" style="grid-column: 8 / 9; grid-row: 1 / -1;"></div>
+            
+            <!-- Shapes -->
+            <div class="lewitt-shape" style="grid-column: 1 / 6; grid-row: 1 / 6;"></div>
+            <div class="lewitt-shape" style="grid-column: 7 / -1; grid-row: 6 / -1;"></div>
+        </div>
+        <h1>ethereal bloom</h1>
+        <p>an ambient + experimental music series in burlington, vt</p>
+    </div>
+
+    <div id="about" class="section">
+        <h2>about</h2>
+        <p>ethereal bloom is a series highlighting ambient and experimental music at Spiral House Art Collective</p>
+        <p>
+            we hope to be a different kind of venue and series: a true listening experience, which welcomes both the attuned musician and the passive listener just wanting to chill out.
+        </p>
+        <p>
+The shows feel like a cozy living room and include much more than just music. Ethereal Bloom features live projected visuals behind the musicians performing.
+</p>
+        <p>
+Movement at Ethereal Bloom is welcome, and so is lying on the floor. Drawing materials, poetry books, and hand fidgets will be provided. This is a space that welcomes folks who may feel overstimulated at typical gigs!
+</p>
+        
+    </div>
+
+    <div id="dates" class="section">
+        <h2>Upcoming Dates</h2>
+        <ul>
+            <li>Oct 11, 2024 - TBD</li>
+        </ul>
+    </div>
+
+    <div id="contact" class="section">
+        <h2>contact</h2>
+        <p>e: bendextermusic at gmail dot com</p>
+        <p>a: 19 church st, 2nd floor, burlington, vt</p>
+    </div>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
